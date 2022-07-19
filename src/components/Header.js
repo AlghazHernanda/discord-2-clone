@@ -17,15 +17,16 @@ function Header() {
       <a className="link">Safety</a>
       <a className="link">Support</a>
     </div>
-    {/* <div className="flex space-x-4">
+    <div className="flex space-x-4">
       <button
-        className="bg-white p-2 rounded-full text-xs md:text-sm px-4 focus:outline-none hover:shadow-2xl hover:text-discord_blurple transition duration-200 ease-in-out whitespace-nowrap font-medium"
-        onClick={!user ? signIn : () => history.push("/channels")}
+        className="bg-white p-2 rounded-full text-xs md:text-sm px-4 focus:outline-none hover:shadow-2xl hover:text-discord_blurple 
+        transition duration-200 ease-in-out whitespace-nowrap font-medium"
+        // onClick={!user ? signIn : () => history.push("/channels")}
       >
-        {!user ? "Login" : "Open Discord"}
+        {/* {!user ? "Login" : "Open Discord"} */}
       </button>
-      <MenuIcon className="h-9 text-white cursor-pointer lg:hidden" />
-    </div> */}
+      {/* <MenuIcon className="h-9 text-white cursor-pointer lg:hidden" /> */}
+    </div>
   </header>
   )
 }
