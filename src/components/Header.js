@@ -1,8 +1,11 @@
-import React from 'react'
+import { MenuIcon } from "@heroicons/react/outline";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { useHistory } from "react-router-dom";
+// import { auth, provider } from "../firebase";
 
 function Header() {
   return (
-    <header className="bg-discord_blue flex items-center justify-between py-4 px-6 bg-black">
+    <header className="bg-discord_blue flex items-center justify-between py-4 px-6">
     <a href="/">
       <img
         src="https://rb.gy/it5msp"
@@ -23,9 +26,9 @@ function Header() {
         transition duration-200 ease-in-out whitespace-nowrap font-medium"
         // onClick={!user ? signIn : () => history.push("/channels")}
       >
-        {/* {!user ? "Login" : "Open Discord"} */}
+        {/* {!user ? "Login" : "Open Discord"} */}Login
       </button>
-      {/* <MenuIcon className="h-9 text-white cursor-pointer lg:hidden" /> */}
+      <MenuIcon className="h-9 text-white cursor-pointer lg:hidden" />
     </div>
   </header>
   )
