@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
-//import Home from "./components/Home";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -12,12 +12,12 @@ function App() {
           <Hero />
         </Route>
 
-        {/* <Route exact path="/channels">
+        <Route exact path="/channels">
           <Home />
         </Route>
         <Route exact path="/channels/:id">
           <Home />
-        </Route> */}
+        </Route>
         
       </Switch>
     </Router>
