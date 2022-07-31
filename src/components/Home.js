@@ -5,6 +5,7 @@ import { auth, db } from "../firebase";
 import { Redirect } from "react-router-dom";
 // import { useCollection } from "react-firebase-hooks/firestore";
 import ServerIcon from './ServerIcon';
+import Channel from './Channel';
 
 const Home = () => {
     const [user] = useAuthState(auth);
@@ -52,6 +53,16 @@ const Home = () => {
                   // onClick={handleAddChannel}
                 />
               </div>
+
+              <div className="flex flex-col space-y-2 px-2 mb-4">
+              {/* {channels?.docs.map((doc) => ( */}
+                <Channel
+                  // key={doc.id}
+                  // id={doc.id}
+                  // channelName={doc.data().channelName}
+                />
+              {/* ))} */}
+            </div>
           </div>
         </div>
 
