@@ -11,15 +11,15 @@ const Home = () => {
     const [user] = useAuthState(auth);
     //const [channels] = useCollection(db.collection("channels"));
   
-    // const handleAddChannel = () => {
-    //   const channelName = prompt("Enter a new channel name");
+    const handleAddChannel = () => {
+      const channelName = prompt("Enter a new channel name");
   
-    //   if (channelName) {
-    //     db.collection("channels").add({
-    //       channelName: channelName,
-    //     });
-    //   }
-    // };
+      if (channelName) {
+        db.collection("channels").add({
+          channelName: channelName,
+        });
+      }
+    };
 
   return (
     <>
@@ -50,7 +50,7 @@ const Home = () => {
                 <h4 className="font-semibold ">Channels</h4>
                 <PlusIcon
                   className="h-6 ml-auto cursor-pointer hover:text-white"
-                  // onClick={handleAddChannel}
+                  onClick={handleAddChannel}
                 />
               </div>
 
