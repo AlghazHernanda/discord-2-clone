@@ -3,13 +3,13 @@ import { ChevronDownIcon, PlusIcon } from "@heroicons/react/outline";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { Redirect } from "react-router-dom";
-// import { useCollection } from "react-firebase-hooks/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
 import ServerIcon from './ServerIcon';
 import Channel from './Channel';
 
 const Home = () => {
     const [user] = useAuthState(auth);
-    //const [channels] = useCollection(db.collection("channels"));
+    const [channels] = useCollection(db.collection("channels"));
   
     const handleAddChannel = () => {
       const channelName = prompt("Enter a new channel name");
@@ -55,13 +55,13 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col space-y-2 px-2 mb-4">
-              {/* {channels?.docs.map((doc) => ( */}
+              {channels?.docs.map((doc) => ( 
                 <Channel
-                  // key={doc.id}
-                  // id={doc.id}
-                  // channelName={doc.data().channelName}
+                  key={doc.id}
+                  id={doc.id}
+                  channelName={doc.data().channelName}
                 />
-              {/* ))} */}
+               ))} 
             </div>
           </div>
         </div>
