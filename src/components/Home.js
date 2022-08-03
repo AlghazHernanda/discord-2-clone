@@ -66,8 +66,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
-            <div>
+          <div className="bg-[#292b2f] p-2 flex justify-between items-center space-x-8">
+            <div className="flex items-center space-x-1">
               <img
                   src={user?.photoURL}
                   alt=""
