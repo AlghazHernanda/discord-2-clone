@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/outline";
+import { MicrophoneIcon, PhoneIcon, CogIcon } from "@heroicons/react/solid";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { Redirect } from "react-router-dom";
@@ -23,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      {/* {!user && <Redirect to="/" />} */}
+      {!user && <Redirect to="/" />}
       <div className="flex h-screen">
         <div className="flex flex-col space-y-3 bg-[#202225] p-3 min-w-max">
           <div className="server-default hover:bg-discord_purple">
@@ -64,6 +65,38 @@ const Home = () => {
                ))} 
             </div>
           </div>
+
+          <div>
+            <div>
+              <img
+                  src={user?.photoURL}
+                  alt=""
+                  className="h-10 rounded-full"
+                  onClick={() => auth.signOut()}
+                />
+
+                 <h4 className="text-white text-xs font-medium">
+                {user?.displayName}{" "}
+                <span className="text-[#b9bbbe] block">
+                  #{user?.uid.substring(0, 4)}
+                </span>
+              </h4>
+            </div>
+
+            <div className="text-gray-400 flex items-center">
+            <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <MicrophoneIcon className="h-5 icon " />
+              </div>
+              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <PhoneIcon className="h-5 icon" />
+              </div>
+              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <CogIcon className="h-5 icon" />
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
