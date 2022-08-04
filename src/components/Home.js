@@ -84,15 +84,15 @@ const Home = () => {
             </div>
 
             <div className="text-gray-400 flex items-center">
-            <div className="hover:bg-[#3A3C43] p-2 rounded-md">
-                <MicrophoneIcon className="h-5 icon " />
-              </div>
               <div className="hover:bg-[#3A3C43] p-2 rounded-md">
-                <PhoneIcon className="h-5 icon" />
-              </div>
-              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
-                <CogIcon className="h-5 icon" />
-              </div>
+                  <MicrophoneIcon className="h-5 icon " />
+                </div>
+                <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                  <PhoneIcon className="h-5 icon" />
+                </div>
+                <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                  <CogIcon className="h-5 icon" />
+                </div>
             </div>
 
           </div>
