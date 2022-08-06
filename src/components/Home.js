@@ -7,6 +7,7 @@ import { Redirect } from "react-router-dom";
 import { useCollection } from "react-firebase-hooks/firestore";
 import ServerIcon from './ServerIcon';
 import Channel from './Channel';
+import Chat from './Chat';
 
 const Home = () => {
     const [user] = useAuthState(auth);
@@ -97,6 +98,10 @@ const Home = () => {
 
           </div>
 
+        </div>
+
+        <div className="bg-[#36393f] flex-grow">
+          <Chat />
         </div>
 
       </div>
